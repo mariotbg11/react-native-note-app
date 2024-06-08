@@ -1,20 +1,16 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import React, { useState } from "react";
+import Home from "./src/screens/home";
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
+const App = () => {
+  const [noteList, setNoteList] = useState([
+    {
+      id: 1,
+      title: "Note pertama",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+    },
+  ]);
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+  return <Home noteList={noteList} />;
+};
+
+export default App;
