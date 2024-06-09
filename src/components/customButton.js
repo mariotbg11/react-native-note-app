@@ -15,6 +15,7 @@ const CustomButton = ({
       backgroundColor,
       width,
       padding: 10,
+      borderRadius: 5,
     },
     buttonText: {
       fontSize,

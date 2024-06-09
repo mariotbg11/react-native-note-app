@@ -5,11 +5,11 @@ import CustomButton from "../components/customButton";
 const NoteCard = ({ item, setCurrentPage, deleteNote, setNoteEdit }) => (
   <View style={styles.card}>
     <Text style={styles.cardTitle}>{item.title}</Text>
-    <Text>{item.desc}</Text>
+    <Text style={styles.cardDesc}>{item.desc}</Text>
     <View style={styles.buttons}>
       <CustomButton
         backgroundColor="#FFC300"
-        color="#151D3B"
+        color="#000"
         text="Ubah"
         fontSize={12}
         width={100}
@@ -35,8 +35,8 @@ const NoteCard = ({ item, setCurrentPage, deleteNote, setNoteEdit }) => (
 const Home = ({ noteList, setCurrentPage, deleteNote, setNoteEdit }) => (
   <View style={styles.container}>
     <CustomButton
-      backgroundColor="#DDD"
-      color="#203239"
+      backgroundColor="#fff"
+      color="#000"
       text="Tambahkan Note"
       width="100%"
       onPress={() => {
@@ -67,24 +67,30 @@ const Home = ({ noteList, setCurrentPage, deleteNote, setNoteEdit }) => (
 
 const styles = StyleSheet.create({
   container: {
+    width: "100%",
+    height: "100%",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
-    padding: 20,
-    marginTop: 20,
+    paddingTop: 45,
+    paddingHorizontal: 20,
+    backgroundColor: "#704F4F",
   },
   card: {
     padding: 10,
     marginVertical: 15,
-    borderColor: "#DDD",
-    borderWidth: 2,
+    borderColor: "1px solid rgba(255, 255, 255, 0.3)",
+    borderWidth: 1,
     borderRadius: 5,
+    backgroundColor: "rgba(255, 255, 255, 0.2)",
   },
   cardTitle: {
     fontWeight: "600",
-    color: "#203239",
+    color: "#fff",
     fontSize: 16,
     marginBottom: 5,
+  },
+  cardDesc: {
+    color: "#fff",
   },
   buttons: {
     marginTop: 10,
@@ -101,6 +107,7 @@ const styles = StyleSheet.create({
   },
   noNotes: {
     fontSize: 18,
+    color: "#fff",
   },
 });
 

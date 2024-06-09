@@ -28,7 +28,7 @@ const AddNote = ({ setCurrentPage, addNote }) => {
       />
       <View style={styles.spacerTop}>
         <CustomButton
-          backgroundColor="#247881"
+          backgroundColor="#0275d8"
           color="#fff"
           text="Simpan"
           width="100%"
@@ -40,7 +40,7 @@ const AddNote = ({ setCurrentPage, addNote }) => {
       </View>
       <View style={styles.spacerTop}>
         <CustomButton
-          backgroundColor="#DDDDDD"
+          backgroundColor="#fff"
           color="#203239"
           text="Kembali ke Home"
           width="100%"
@@ -53,17 +53,18 @@ const AddNote = ({ setCurrentPage, addNote }) => {
 
 const styles = StyleSheet.create({
   container: {
+    height: "100%",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
     padding: 20,
+    backgroundColor: "#704F4F",
   },
   pageTitle: {
     marginTop: 20,
     fontSize: 20,
     fontWeight: "700",
     textAlign: "center",
-    color: "#203239",
+    color: "#fff",
   },
   spacerTop: {
     marginTop: 30,
