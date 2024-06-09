@@ -9,6 +9,9 @@ const CurrentPageWidget = ({
   setCurrentPage,
   addNote,
   deleteNote,
+  editNote,
+  noteEdit,
+  setNoteEdit,
 }) => {
   switch (currentPage) {
     case "home":
@@ -17,12 +20,19 @@ const CurrentPageWidget = ({
           noteList={noteList}
           setCurrentPage={setCurrentPage}
           deleteNote={deleteNote}
+          setNoteEdit={setNoteEdit}
         />
       );
     case "add":
       return <AddNote setCurrentPage={setCurrentPage} addNote={addNote} />;
     case "edit":
-      return <EditNote />;
+      return (
+        <EditNote
+          setCurrentPage={setCurrentPage}
+          editNote={editNote}
+          noteEdit={noteEdit}
+        />
+      );
     default:
       return <Home />;
   }
@@ -38,6 +48,8 @@ const App = () => {
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
     },
   ]);
+
+  const [noteEdit, setNoteEdit] = useState(null);
 
   const addNote = (title, desc) => {
     const id = noteList.length > 0 ? noteList[noteList.length - 1].id + 1 : 1;
@@ -58,6 +70,14 @@ const App = () => {
     setNoteList(notes);
   };
 
+  const editNote = (id, title, desc) => {
+    const changeNotes = noteList.map((note) =>
+      note.id === id ? { ...note, title, desc } : note
+    );
+    setNoteList(changeNotes);
+    setNoteEdit(null);
+  };
+
   return (
     <CurrentPageWidget
       currentPage={currentPage}
@@ -65,6 +85,9 @@ const App = () => {
       noteList={noteList}
       addNote={addNote}
       deleteNote={deleteNote}
+      editNote={editNote}
+      noteEdit={noteEdit}
+      setNoteEdit={setNoteEdit}
     />
   );
 };
