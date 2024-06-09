@@ -16,12 +16,17 @@ const CustomTextInput = ({
       borderWidth: 2,
       borderColor: "#DDD",
       padding: 10,
+      borderRadius: 5,
+      color: "#fff",
+    },
+    label: {
+      color: "#fff",
     },
   });
 
   return (
     <View style={styles.textInputWrapper}>
-      <Text>{label}</Text>
+      <Text style={styles.label}>{label}</Text>
       <TextInput
         multiline={multiline}
         numberOfLines={numberOfLines}

@@ -35,7 +35,7 @@ const EditNote = ({ setCurrentPage, editNote, noteEdit }) => {
       />
       <View style={styles.spacerTop}>
         <CustomButton
-          backgroundColor="#247881"
+          backgroundColor="#0275d8"
           color="#fff"
           text="Simpan"
           width="100%"
@@ -47,8 +47,8 @@ const EditNote = ({ setCurrentPage, editNote, noteEdit }) => {
       </View>
       <View style={styles.spacerTop}>
         <CustomButton
-          backgroundColor="#DDDDDD"
-          color="#203239"
+          backgroundColor="#fff"
+          color="#000"
           text="Kembali ke Home"
           width="100%"
           onPress={() => setCurrentPage("home")}
@@ -60,17 +60,18 @@ const EditNote = ({ setCurrentPage, editNote, noteEdit }) => {
 
 const styles = StyleSheet.create({
   container: {
+    height: "100%",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
     padding: 20,
+    backgroundColor: "#704F4F",
   },
   pageTitle: {
     marginTop: 20,
     fontSize: 20,
     fontWeight: "700",
     textAlign: "center",
-    color: "#203239",
+    color: "#fff",
   },
   spacerTop: {
     marginTop: 30,
