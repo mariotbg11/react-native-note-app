@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     padding: 20,
-    backgroundColor: "#704F4F",
+    backgroundColor: "#022C43",
   },
   pageTitle: {
     marginTop: 20,

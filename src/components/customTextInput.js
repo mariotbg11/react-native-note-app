@@ -13,11 +13,12 @@ const CustomTextInput = ({
       marginTop: 20,
     },
     input: {
-      borderWidth: 2,
-      borderColor: "#DDD",
+      borderWidth: 1,
+      borderColor: "1px solid rgba(255, 255, 255, 0.3)",
       padding: 10,
       borderRadius: 5,
       color: "#fff",
+      backgroundColor: "rgba(255, 255, 255, 0.2)",
     },
     label: {
       color: "#fff",
@@ -32,6 +33,7 @@ const CustomTextInput = ({
         numberOfLines={numberOfLines}
         style={styles.input}
         placeholder={label}
+        placeholderTextColor={"#B9D2D2"}
         onChangeText={onChange}
         defaultValue={text}
       />

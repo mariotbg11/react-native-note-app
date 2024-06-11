@@ -8,7 +8,7 @@ const NoteCard = ({ item, setCurrentPage, deleteNote, setNoteEdit }) => (
     <Text style={styles.cardDesc}>{item.desc}</Text>
     <View style={styles.buttons}>
       <CustomButton
-        backgroundColor="#FFC300"
+        backgroundColor="#F8DE22"
         color="#000"
         text="Ubah"
         fontSize={12}
@@ -19,7 +19,7 @@ const NoteCard = ({ item, setCurrentPage, deleteNote, setNoteEdit }) => (
         }}
       />
       <CustomButton
-        backgroundColor="#D82148"
+        backgroundColor="#FF0000"
         color="#fff"
         text="Hapus"
         fontSize={12}
@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     paddingTop: 45,
     paddingHorizontal: 20,
-    backgroundColor: "#704F4F",
+    backgroundColor: "#022C43",
   },
   card: {
     padding: 10,
